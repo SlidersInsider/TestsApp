@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="2"
-    tools:context=".MainActivity">
+    tools:context=".activities.EnterPage">
 
     <Button
         android:id="@+id/login_btn"
@@ -16,8 +16,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_weight="1"
-        android:text="@string/login"
-        android:onClick="login_activity"/>
+        android:text="@string/login" />
     <Button
         android:id="@+id/signup_btn"
         android:layout_width="wrap_content"
@@ -26,8 +25,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_weight="1"
-        android:text="@string/sign_up"
-        android:onClick="signup_activity"/>
+        android:text="@string/sign_up" />
 
 
 

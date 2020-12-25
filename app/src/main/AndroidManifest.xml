@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tests">
 
-        <activity android:name=".MainPage" />
-        <activity android:name=".SignUpPage" />
-        <activity android:name=".LoginPage" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainPage" />
+        <activity android:name=".activities.SignUpPage" />
+        <activity android:name=".activities.LoginPage" />
+        <activity android:name=".activities.EnterPage">
 
         </activity>
-        <activity android:name=".SplashScreen"
+        <activity android:name=".activities.SplashScreen"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.tests
+package com.example.tests.activities
 
 import android.content.Intent
 import android.content.Context
@@ -8,11 +8,12 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.tests.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.example.tests.Storage.PersistantStorage
+import com.example.tests.storages.PersistantStorage
 
 class LoginPage : AppCompatActivity() {
 

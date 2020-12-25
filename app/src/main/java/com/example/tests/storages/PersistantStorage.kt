@@ -1,4 +1,4 @@
-package com.example.tests.Storage
+package com.example.tests.storages
 
 import android.content.Context
 import android.content.SharedPreferences

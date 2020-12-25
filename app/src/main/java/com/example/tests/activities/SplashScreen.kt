@@ -1,11 +1,11 @@
-package com.example.tests
+package com.example.tests.activities
 
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tests.Storage.PersistantStorage
+import com.example.tests.storages.PersistantStorage
 
 
 class SplashScreen : AppCompatActivity() {
@@ -21,7 +21,7 @@ class SplashScreen : AppCompatActivity() {
             finish()
         }
         else{
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, EnterPage::class.java)
             startActivity(intent)
             finish()
         }

@@ -1,4 +1,4 @@
-package com.example.tests
+package com.example.tests.activities
 
 import android.content.Context
 import android.content.Intent
@@ -6,10 +6,11 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.tests.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.example.tests.Storage.PersistantStorage
+import com.example.tests.storages.PersistantStorage
 
 class MainPage : AppCompatActivity() {
 
@@ -34,7 +35,7 @@ class MainPage : AppCompatActivity() {
         editor.putString("status", "unlogged")
         editor.commit()
 
-        val main_act : Intent = Intent(this, MainActivity::class.java)
+        val main_act : Intent = Intent(this, EnterPage::class.java)
         startActivity(main_act)
     }
 

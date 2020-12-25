@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -40,10 +41,25 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // Firebase
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation platform('com.google.firebase:firebase-bom:26.0.0')
     implementation 'com.google.firebase:firebase-auth:20.0.0'
     implementation 'com.google.firebase:firebase-database-ktx:19.5.1'
+
+    // Moxy
+    implementation "com.github.moxy-community:moxy-android:2.2.0"
+    implementation "com.github.moxy-community:moxy-app-compat:2.2.0"
+    implementation "com.github.moxy-community:moxy-material:2.2.0"
+    implementation "com.github.moxy-community:moxy:2.2.0"
+    kapt "com.github.moxy-community:moxy-compiler:2.2.0"
+
+    // Dagger
+    implementation 'com.google.dagger:dagger-android:2.+'
+    implementation 'com.google.dagger:dagger-android-support:2.+' // if you use the support libraries
+    kapt 'com.google.dagger:dagger-android-processor:2.+'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

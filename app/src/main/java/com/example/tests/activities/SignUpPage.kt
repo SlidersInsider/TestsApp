@@ -1,4 +1,4 @@
-package com.example.tests
+package com.example.tests.activities
 
 import android.content.Context
 import android.content.Intent
@@ -8,8 +8,9 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
-import com.example.tests.Model.User
-import com.example.tests.Storage.PersistantStorage
+import com.example.tests.models.User
+import com.example.tests.R
+import com.example.tests.storages.PersistantStorage
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -58,13 +59,11 @@ class SignUpPage : AppCompatActivity() {
             Snackbar.make(findViewById(R.id.signup_layout),"Enter equals password!", Snackbar.LENGTH_SHORT).show()
             return
         }
-        val user : User = User()
-        user.email = email_str
-        user.login = login_str
-        user.password = password_str
+        val user : User = User(email_str, login_str, password_str)
 
         auth.createUserWithEmailAndPassword(email_str, password_str)
         users.child(user.login).setValue(user)
+
         var storage = PersistantStorage()
         val settings: SharedPreferences = getSharedPreferences(storage.APP_PREFERENCES, Context.MODE_PRIVATE)
         val editor = settings.edit()
