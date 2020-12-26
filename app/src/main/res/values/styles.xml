@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedCornerButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/rounded_btn</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

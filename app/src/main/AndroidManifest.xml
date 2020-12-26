@@ -16,8 +16,8 @@
         <activity android:name=".activities.EnterPage">
 
         </activity>
-        <activity android:name=".activities.SplashScreen"
-            android:theme="@style/SplashTheme">
+        <activity android:name=".activities.SplashScreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
